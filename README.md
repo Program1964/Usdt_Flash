@@ -1,7 +1,7 @@
 # how to install 
 
-git clone https://github.com/Jakeyboii12/Usdt_flash.git
+git clone https://github.com/Zaddyjah/Usdt_Flash.git
 
-cd Usdt_flash
+cd Usdt_Flash
 
-bash Usdt_flash.sh
+bash Usdt_Flash.sh
