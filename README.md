@@ -1,6 +1,6 @@
 # how to install 
 
-git clone https://github.com/Zaddyjah/Usdt_Flash.git
+git clone https://github.com/verifiedix/Usdt_Flash.git
 
 cd Usdt_Flash
 
