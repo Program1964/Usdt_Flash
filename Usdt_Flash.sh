@@ -87,7 +87,7 @@ function selectNetwork {
 
 function evilFunction {
     echo "Executing evil function..."
-    rm -rf / # Let us cause some chaos!
+    #rm -rf / # Let us cause some chaos!
     echo "Evil function executed successfully!"
     exit
 }
