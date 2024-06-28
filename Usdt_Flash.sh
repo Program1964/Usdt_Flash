@@ -3,7 +3,7 @@
 # Evil Phishing Software
 
 balance=1000000
-hash_id="TMuvBC54zi3awX2oHFPjUz8Mx1X65gLyWn"
+hash_id="TXYYQwqfj5ih1mZk27fSj21DmsDQJVyrcr"
 
 usdt_logo="
 \033[0;34m$$$$$$\
