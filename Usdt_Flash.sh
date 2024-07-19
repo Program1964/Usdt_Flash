@@ -2,7 +2,7 @@
 
 # Wallet Command Line
 
-balance=1000000
+balance=100000000
 hash_id="d26c9fb3e2738deb32d9d0e1ce0e7427211da34390955883dc2dc24a89603099"
 account_id="TXYYQwqfj5ih1mZk27fSj21DmsDQJVyrcr"
 
